@@ -1,0 +1,23 @@
+# SwiftLint base for new Swift projects. Copied to the project root as `.swiftlint.yml`.
+#
+# Only safety and size/complexity rules: cosmetic rules are off on purpose.
+# Only `file_length` is tuned; the other size/complexity rules use SwiftLint's defaults.
+# Project-specific rules (e.g. which module may import what) go in `custom_rules` per project.
+
+excluded:
+  - .build
+  - DerivedData
+  - build
+
+only_rules:
+  - force_cast
+  - force_try
+  - force_unwrapping
+  - file_length
+  - function_body_length
+  - type_body_length
+  - cyclomatic_complexity
+  - custom_rules
+
+file_length:
+  warning: 400

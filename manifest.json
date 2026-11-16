@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "rules": [
+    "rules/architecture.md",
+    "rules/composition.md",
+    "rules/concurrency.md",
+    "rules/structure.md",
+    "rules/style.md",
+    "rules/testing.md"
+  ],
+  "agents": ["agents/swift-code-review.md"],
+  "skills": ["skills/analyze-macos-ios-codebase"],
+  "hooks": [
+    {
+      "id": "lintOnEdit",
+      "title": "Lint on edit",
+      "summary": "Runs swiftlint on every Swift file Claude edits and reports violations to Claude.",
+      "event": "PostToolUse",
+      "matcher": "Edit|MultiEdit|Write",
+      "script": "hooks/swiftlint-on-edit.sh"
+    },
+    {
+      "id": "blockDangerousCommands",
+      "title": "Block dangerous commands",
+      "summary": "Refuses `rm -rf /`, `git push --force` and `git reset --hard` before they run.",
+      "event": "PreToolUse",
+      "matcher": "Bash",
+      "script": "hooks/block-dangerous-commands.sh"
+    }
+  ],
+  "swiftlint": "lint/swiftlint.yml",
+  "lintScript": "lint/lint.sh",
+  "agentsSection": "templates/AGENTS-swift-section.md"
+}
