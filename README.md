@@ -27,7 +27,7 @@ Every file starts with `paths: "**/*.swift"`: installed under `## The rest of th
 | `lint/swiftlint.yml` | safety and size/complexity rules only, no cosmetic ones | `.swiftlint.yml` |
 | `lint/lint.sh` | the gate: exit 1 only on violations outside `.swiftlint-baseline.json` | `scripts/lint.sh` |
 | `templates/AGENTS-swift-section.md` | the section where a project states its adjustments | pasted into `AGENTS.md` |
-| `manifest.json` | what the kit contains and how each hook is wired | read by `install.sh` |
+| `manifest.json` | what the kit contains and how each hook is wired | read by `install.sh` and DeadCode's project setup |
 
 The hooks and the installer need `jq`; lint needs `swiftlint` (`brew install jq swiftlint`).
 

@@ -1,5 +1,7 @@
 {
   "schemaVersion": 1,
+  "name": "swift-kit",
+  "rulesDir": ".claude/rules/swift",
   "rules": [
     "rules/architecture.md",
     "rules/composition.md",
@@ -8,8 +10,12 @@
     "rules/style.md",
     "rules/testing.md"
   ],
-  "agents": ["agents/swift-code-review.md"],
-  "skills": ["skills/analyze-macos-ios-codebase"],
+  "agents": [
+    "agents/swift-code-review.md"
+  ],
+  "skills": [
+    "skills/analyze-macos-ios-codebase"
+  ],
   "hooks": [
     {
       "id": "lintOnEdit",
