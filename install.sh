@@ -66,8 +66,13 @@ jq --slurpfile manifest "${MANIFEST}" '
 echo "  .claude/settings.json (hooks)"
 
 echo "Project files:"
-create_if_missing "${KIT}/$(list '.swiftlint')" "${PROJECT}/.swiftlint.yml"
-create_if_missing "${KIT}/$(list '.lintScript')" "${PROJECT}/scripts/lint.sh"
+# A project with a `.swiftlint.yml` already has its lint set up, wherever its script lives.
+if [[ -e "${PROJECT}/.swiftlint.yml" ]]; then
+    echo "  kept .swiftlint.yml and the project's lint script"
+else
+    create_if_missing "${KIT}/$(list '.swiftlint')" "${PROJECT}/.swiftlint.yml"
+    create_if_missing "${KIT}/$(list '.lintScript')" "${PROJECT}/scripts/lint.sh"
+fi
 
 if ! grep -qs 'swift-rules' "${PROJECT}/AGENTS.md"; then
     echo ""

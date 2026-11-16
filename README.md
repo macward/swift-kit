@@ -45,7 +45,7 @@ under `.claude/`; the installer warns when it does.
 - **The kit's files** (rules, agent, skill, hook scripts) are overwritten on every run, and the hooks
   are merged into `.claude/settings.json` without duplicating them. To update, pull the kit, run the
   installer again and review the diff.
-- **The project's files** (`.swiftlint.yml`, `scripts/lint.sh`) are created only when missing: after
+- **The project's files** (`.swiftlint.yml`, `scripts/lint.sh`) are created only when the project has no `.swiftlint.yml` yet: after
   that they belong to the project, which tunes `included`, `excluded` and `custom_rules`.
 
 To adopt lint on a codebase with existing debt, run `bash scripts/lint.sh --write-baseline` once,
