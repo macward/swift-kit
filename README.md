@@ -21,8 +21,9 @@ it when it touches a Swift file and not before.
 ## Install in a project
 
 ```bash
+git clone https://github.com/macward/swift-rules.git /tmp/swift-rules
 mkdir -p .claude/rules/swift
-cp ~/Developer/1_PROJECTS/swift-rules/rules/*.md .claude/rules/swift/
+cp /tmp/swift-rules/rules/*.md .claude/rules/swift/
 ```
 
 Copy, don't symlink, and commit the copies: a symlink out of the repo is missing in every
