@@ -1,4 +1,4 @@
-# swift-rules
+# swift-kit
 
 A kit for coding agents (Claude Code) working on Swift apps and packages for macOS and iOS:
 rules, a review agent, an audit skill, hooks and a SwiftLint gate. The rules are the core.
@@ -34,8 +34,8 @@ The hooks and the installer need `jq`; lint needs `swiftlint` (`brew install jq 
 ## Install in a project
 
 ```bash
-git clone https://github.com/macward/swift-rules.git /tmp/swift-rules
-bash /tmp/swift-rules/install.sh path/to/project
+git clone https://github.com/macward/swift-kit.git /tmp/swift-kit
+bash /tmp/swift-kit/install.sh path/to/project
 ```
 
 The installer copies; it never symlinks. Commit the copies: a symlink out of the repo is missing in

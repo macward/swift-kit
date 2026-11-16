@@ -74,7 +74,7 @@ else
     create_if_missing "${KIT}/$(list '.lintScript')" "${PROJECT}/scripts/lint.sh"
 fi
 
-if ! grep -qs 'swift-rules' "${PROJECT}/AGENTS.md"; then
+if ! grep -qs 'swift-kit' "${PROJECT}/AGENTS.md"; then
     echo ""
     echo "Next: add the section in $(list '.agentsSection') to AGENTS.md and fill it in."
 fi

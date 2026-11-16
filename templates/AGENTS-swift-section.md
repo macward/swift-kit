@@ -1,6 +1,6 @@
 ## Swift rules
 
-`.claude/rules/swift/` is a copy of the `swift-rules` set (https://github.com/macward/swift-rules):
+`.claude/rules/swift/` is a copy of the `swift-kit` kit (https://github.com/macward/swift-kit):
 it is not edited here; to update it, run the kit's `install.sh` again and review the diff. The
 rules apply with these adjustments, which win over them:
 
